@@ -11,13 +11,13 @@ function Header() {
           </Link>
           <nav className="flex items-center space-x-6 text-sm">
             <Link
-              className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              className="font-medium text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-black"
               href="/"
             >
               Home
             </Link>
             <Link
-              className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              className="font-medium text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-black"
               href="/form"
             >
               お申し込み

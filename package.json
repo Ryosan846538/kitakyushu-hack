@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@yamada-ui/calendar": "^1.2.4",
     "@yamada-ui/react": "^1.2.11",
     "next": "14.1.4",
     "prettier": "^3.2.5",

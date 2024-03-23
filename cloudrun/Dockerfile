@@ -4,11 +4,11 @@ WORKDIR /app
 
 COPY ./ ./
 
-RUN npm install
+RUN yarn install
 
-RUN npm run build
+RUN yarn build
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
 
 ENV HOST=0.0.0.0
 

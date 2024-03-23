@@ -16,11 +16,16 @@ function CalendarComponent() {
   }
 
   const [events, setEvents] = useState<EventType[]>([
-    { title: "eventを", start: "2024-03-14" },
+    { title: "株式会社●●", start: "2024-03-04", end: "2024-03-09" },
     {
-      title: "こんな感じで追加できます",
-      start: "2024-03-15",
-      end: "2024-03-17",
+      title: "株式会社△△",
+      start: "2024-03-11",
+      end: "2024-03-16",
+    },
+    {
+      title: "株式会社××",
+      start: "2024-03-25",
+      end: "2024-03-30",
     },
   ]);
 

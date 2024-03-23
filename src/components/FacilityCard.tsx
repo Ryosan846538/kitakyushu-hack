@@ -33,7 +33,10 @@ export function FacilityCard({
       </CardBody>
       <CardFooter justifyContent="flex-end">
         <Link href="/calendar">
-          <Button colorScheme="primary">予約</Button>
+          <Button colorScheme="primary">予約状況</Button>
+        </Link>
+        <Link href="/form">
+          <Button colorScheme="primary">問い合わせ</Button>
         </Link>
       </CardFooter>
     </Card>

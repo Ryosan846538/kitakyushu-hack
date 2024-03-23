@@ -30,5 +30,6 @@
     ".eslintrc.js",
     ".lintstagedrc.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "ignorePatterns": ["node_modules", "src/pb_ts/**/*"],
 }

@@ -16,14 +16,14 @@ function CalendarComponent() {
   const handleEventAdd = () => {
     const eventName = prompt("イベントを入力してください");
 
-    /*if (eventName) {
+    if (eventName) {
       const newEvent: EventInput = {
         title: eventName,
         start: new Date().toISOString(), // 現在の日時を使用
         allDay: true,
       };
       setEvents((prevEvents) => [...prevEvents, newEvent]);
-    }*/
+    }
   };
 
   return (

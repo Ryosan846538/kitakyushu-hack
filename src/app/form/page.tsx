@@ -1,3 +1,4 @@
+import { Button } from "@yamada-ui/react";
 import React from "react";
 import { InputField } from "@/components/InputField";
 import { TextareaField } from "@/components/TextareaField";
@@ -17,50 +18,51 @@ function FormPage() {
             <InputField
               id="company"
               name="company"
-              placeholder="会社名"
               type="text"
               required
+              placeholder="会社名"
             />
 
             <InputField
               id="week"
               name="week"
-              placeholder="希望日程"
+              type="text"
               required
-              type="date"
+              placeholder="希望日程"
             />
 
             <TextareaField
               id="activity"
               name="activity"
+              required
               placeholder="何をするか"
               rows={6}
-              required
             />
 
             <TextareaField
               id="request"
               name="request"
+              required
               placeholder="事前の要望"
               rows={6}
-              required
             />
 
             <InputField
               id="email"
               name="email"
               type="email"
-              placeholder="メールアドレス"
               required
+              placeholder="メールアドレス"
             />
           </div>
           <div>
-            <button
+            <Button
               type="submit"
               className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              colorScheme="primary"
             >
               送信
-            </button>
+            </Button>
           </div>
         </form>
       </div>

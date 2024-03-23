@@ -1,3 +1,4 @@
+import { Textarea } from "@yamada-ui/react";
 import React from "react";
 
 interface TextareaFieldProps {
@@ -16,7 +17,7 @@ export function TextareaField({
   required = false,
 }: TextareaFieldProps) {
   return (
-    <textarea
+    <Textarea
       id={id}
       name={name}
       rows={rows}

@@ -2,11 +2,9 @@ FROM node:20-slim
 
 WORKDIR /app
 
-COPY ./ ./
-
-RUN yarn install
-
-RUN yarn build
+COPY ./.next ./.next
+COPY ./package.json ./package.json
+COPY ./package-lock.json ./package-lock.json
 
 CMD ["yarn", "start"]
 

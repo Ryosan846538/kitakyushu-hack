@@ -6,9 +6,14 @@ function LandingPage() {
     <div>
       <main>
         <section className="package-hero">
-          <Image src="./package1.jpg" alt="北九州市の風景" />
+          <Image
+            src="/package1.jpg"
+            alt="北九州市の風景"
+            width={1200}
+            height={800}
+          />
           <div className="package-text">
-            <h1>パッケージ１</h1>
+            <h1>パッケージ3</h1>
             <p>
               おいしい食事、快適な宿泊場所、魅力的な観光地をご用意しました。
             </p>
@@ -27,14 +32,24 @@ function LandingPage() {
               <p>
                 八幡ぎょうさは、北九州市八幡地区の名物料理です。小麦粉の生地を細く伸ばし、豚挽き肉、キャベツ、ニラなどの具材を詰めて揚げた、もちもちの食感が楽しめる餃子です。
               </p>
-              <Image src="./food1.jpg" alt="八幡ぎょうさ" />
+              <Image
+                src="/food1.jpg"
+                alt="八幡ぎょうさ"
+                width={300}
+                height={200}
+              />
             </li>
             <li>
               <h3>やきうどん</h3>
               <p>
                 やきうどんは、北九州市を代表する家庭料理です。ソース味の濃い目の味付けが特徴で、キャベツ、モヤシ、豚肉などの具材が入っています。弾力のある食感と香ばしい香りがクセになる一品です。
               </p>
-              <Image src="./food2.jpg" alt="やきうどん" />
+              <Image
+                src="/food2.jpg"
+                alt="やきうどん"
+                width={300}
+                height={200}
+              />
             </li>
           </ul>
         </section>
@@ -52,14 +67,24 @@ function LandingPage() {
               <p>
                 JR小倉駅直結の好立地にあり、清潔で機能的な客室と充実した設備を備えたシティホテル。ビジネスや観光の拠点に最適です。
               </p>
-              <Image src="./hotel1.jpg" alt="ホテル モンテレーネ 小倉" />
+              <Image
+                src="/hotel1.jpg"
+                alt="ホテル モンテレーネ 小倉"
+                width={300}
+                height={200}
+              />
             </li>
             <li>
               <h3>リソル 生月ヶ浦</h3>
               <p>
                 別府湾を一望できる絶景の宿。開放的な露天風呂や、美味しい会席料理で贅沢なひとときをお過ごしいただけます。
               </p>
-              <Image src="./hotel2.jpg" alt="リソル 生月ヶ浦" />
+              <Image
+                src="/hotel2.jpg"
+                alt="リソル 生月ヶ浦"
+                width={300}
+                height={200}
+              />
             </li>
           </ul>
         </section>
@@ -77,14 +102,19 @@ function LandingPage() {
               <p>
                 国の重要文化財に指定されている産業遺産。当時の生産設備が保存され、産業革命期の生活や技術を垣間見ることができます。
               </p>
-              <Image src="./trip1.jpg" alt="旧三菱小倉鉱業所" />
+              <Image
+                src="/trip1.jpg"
+                alt="旧三菱小倉鉱業所"
+                width={300}
+                height={200}
+              />
             </li>
             <li>
               <h3>皿倉山</h3>
               <p>
                 標高314mの小高い山で、山頂からは北九州市内や関門海峡を一望できる絶景が広がります。ハイキングコースも整備されています。
               </p>
-              <Image src="./trip2.jpg" alt="皿倉山" />
+              <Image src="/trip2.jpg" alt="皿倉山" width={300} height={200} />
             </li>
           </ul>
         </section>

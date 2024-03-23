@@ -28,6 +28,8 @@
     "prettier": "^3.2.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-simple-chatbot": "^0.6.1",
+    "styled-components": "^6.1.8",
     "typescript": "^5.4.3"
   },
   "devDependencies": {

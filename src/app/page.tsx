@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import ChatUi from "@/components/ChatUi";
 import FacilityCard from "@/components/FacilityCard";
 
 interface Facility {
@@ -48,6 +49,7 @@ export default function Home() {
           />
         ))}
       </div>
+      <ChatUi />
     </div>
   );
 }

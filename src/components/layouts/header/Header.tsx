@@ -43,6 +43,24 @@ function Header() {
             >
               お申し込み
             </Link>
+            <Link
+              className="font-medium text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-black"
+              href="/package"
+            >
+              パッケージ1
+            </Link>
+            <Link
+              className="font-medium text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-black"
+              href="/package2"
+            >
+              パッケージ2
+            </Link>
+            <Link
+              className="font-medium text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-black"
+              href="/package3"
+            >
+              パッケージ3
+            </Link>
             {/* <Link
               className="bg-black py-3 px-4 text-white rounded-md font-medium"
               href="/create"

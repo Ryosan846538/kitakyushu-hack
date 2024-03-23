@@ -1,0 +1,159 @@
+/* フォントの指定 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.package-hero {
+    position: relative;
+  }
+  
+  .package-hero img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .package-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .package-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .package-text p {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+/* メインコンテンツスタイル */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  section {
+    margin-bottom: 60px;
+  }
+  
+  h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  li {
+    width: 48%;
+    margin-bottom: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  li:hover {
+    transform: translateY(-10px);
+  }
+  
+  li h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 20px;
+  }
+  
+  li p {
+    margin: 0 20px 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+  
+  .intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .cta {
+    background-color: #ffefa7; /* 背景色を薄い黄色(#ffefa7)に変更 */
+    color: #333; /* テキストの色を黒に変更 */
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .cta p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .cta button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cta button:hover {
+    background-color: #555;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background-color: #f8b500;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+  }

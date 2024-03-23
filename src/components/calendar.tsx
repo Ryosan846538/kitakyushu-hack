@@ -1,21 +1,48 @@
-import { VStack } from "@chakra-ui/react"; // Chakra UIのVStackをインポート
-import { Calendar } from "@yamada-ui/calendar"; // 外部のカレンダーコンポーネントをインポート
-import React from "react";
+"use client";
+
+import jaLocale from "@fullcalendar/core/locales/ja";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import FullCalendar, { EventInput } from "@fullcalendar/react";
+import React, { useState } from "react";
 
 function CalendarComponent() {
+  const [events, setEvents] = useState<EventInput[]>([
+    { title: "eventを", start: "2024-03-14" },
+    { title: "こんな感じで追加できます", start: "2024-03-15", end: "2024-03-17" },
+  ]);
+
+  const handleEventAdd = () => {
+    const eventName = prompt("イベントを入力してください");
+
+    /*if (eventName) {
+      const newEvent: EventInput = {
+        title: eventName,
+        start: new Date().toISOString(), // 現在の日時を使用
+        allDay: true,
+      };
+      setEvents((prevEvents) => [...prevEvents, newEvent]);
+    }*/
+  };
+
   return (
-    <VStack>
-      <Calendar
-        variant="solid"
-        today
-        defaultValue={new Date(new Date().setDate(1))}
+    <div>
+      <FullCalendar
+        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+        initialView="dayGridMonth"
+        locales={[jaLocale]}
+        locale="ja"
+        headerToolbar={{
+          left: "prev,next today",
+          center: "title",
+          right: "dayGridMonth,timeGridWeek",
+        }}
+        events={events}
+        selectable
+        select={handleEventAdd}
       />
-      <Calendar
-        variant="subtle"
-        today
-        defaultValue={new Date(new Date().setDate(1))}
-      />
-    </VStack>
+    </div>
   );
 }
 

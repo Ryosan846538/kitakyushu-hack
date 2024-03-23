@@ -110,9 +110,9 @@ function FormPage() {
     <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
         <div>
-          <h2 className="text-center text-3xl font-extrabold text-gray-900">
+          <Text className="text-center text-3xl font-extrabold text-gray-900">
             お申し込みフォーム
-          </h2>
+          </Text>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <input type="hidden" name="remember" value="true" />
@@ -167,7 +167,7 @@ function FormPage() {
                 name="business"
                 required
                 placeholder="事業内容"
-                rows={6}
+                rows={4}
                 value={formData.business}
                 onChange={handleChange}
               />
@@ -177,15 +177,27 @@ function FormPage() {
                 name="inquiry"
                 required={false}
                 placeholder="気になること"
-                rows={6}
+                rows={4}
                 value={formData.inquiry}
                 onChange={handleChange}
               />
 
+              <Select
+                placeholder="返信オプションを選択"
+                onChange={handleSelectChange}
+              >
+                <Option value="slack">Slack</Option>
+                <Option value="email">Email</Option>
+              </Select>
+
               <div>
-                <button type="button" onClick={handleAddOtherStaffForm}>
+                <Button
+                  colorScheme="secondary"
+                  size="xs"
+                  onClick={handleAddOtherStaffForm}
+                >
                   その他の担当者を追加
-                </button>
+                </Button>
                 {otherStaffForms.map((form, index) => (
                   <div
                     key={`${form.lastName}-${form.firstName}-${form.email}`}
@@ -223,24 +235,19 @@ function FormPage() {
                       value={form.email}
                       onChange={(e) => handleOtherStaffFormChange(index, e)}
                     />
-                    <button
-                      type="button"
+                    <Button
+                      colorScheme="danger"
+                      size="xs"
                       onClick={() => handleRemoveOtherStaffForm(index)}
+                      className="ml-auto"
                     >
                       削除
-                    </button>
+                    </Button>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-          <Select
-            placeholder="対応オプションを選択"
-            onChange={handleSelectChange}
-          >
-            <Option value="slack">Slack</Option>
-            <Option value="email">E-mail</Option>
-          </Select>
           <Button
             type="submit"
             className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"

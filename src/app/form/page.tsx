@@ -16,15 +16,7 @@ function FormPage() {
           <input type="hidden" name="remember" value="true" />
           <div className="-space-y-px rounded-md shadow-sm">
             <div className="space-y-2">
-              <InputField
-                id="company"
-                name="company"
-                type="text"
-                required
-                placeholder="会社名"
-                className=""
-              />
-              <Text>代表者名</Text>
+              <Text>代表者名（必須）</Text>
               <div className="flex space-x-4">
                 <InputField
                   id="last-name"
@@ -44,6 +36,14 @@ function FormPage() {
                 />
               </div>
               <InputField
+                id="company"
+                name="company"
+                type="text"
+                required
+                placeholder="会社名"
+                className=""
+              />
+              <InputField
                 id="email"
                 name="email"
                 type="email"
@@ -51,12 +51,29 @@ function FormPage() {
                 placeholder="メールアドレス"
                 className=""
               />
+
               <TextareaField
                 id="business-details"
                 name="business-details"
                 required
                 placeholder="事業内容"
                 rows={6}
+              />
+              <TextareaField
+                id="business-details"
+                name="business-details"
+                required={false}
+                placeholder="気になること"
+                rows={6}
+              />
+
+              <InputField
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="その他の担当者のメールアドレス"
+                className=""
               />
             </div>
           </div>

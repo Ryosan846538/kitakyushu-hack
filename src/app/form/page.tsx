@@ -23,14 +23,6 @@ function FormPage() {
               placeholder="会社名"
             />
 
-            <InputField
-              id="week"
-              name="week"
-              type="date"
-              required
-              placeholder="希望日程"
-            />
-
             <TextareaField
               id="activity"
               name="activity"

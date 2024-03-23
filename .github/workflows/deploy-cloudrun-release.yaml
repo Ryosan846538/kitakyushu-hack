@@ -45,7 +45,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: asia-northeast1-docker.pkg.dev/openhacku-team-a/release/frontend:latest
+          tags: asia-northeast1-docker.pkg.dev/kyusyu-hackathon/main/frontend-release:latest
           context: .
           file: ./cloudrun/Dockerfile
 

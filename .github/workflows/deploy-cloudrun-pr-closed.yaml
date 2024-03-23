@@ -36,7 +36,7 @@ jobs:
         id: delete-artifact-registry
         continue-on-error: true
         run: |
-          gcloud artifacts docker images delete asia-northeast1-docker.pkg.dev/openhacku-team-a/staging/frontend-pr-${{ github.event.number }} --quiet
+          gcloud artifacts docker images delete asia-northeast1-docker.pkg.dev/kyusyu-hackathon/main/frontend-pr-${{ github.event.number }} --quiet
 
       - name: Notify Failure on Pull Request
         if: ${{ steps.delete-cloudrun-service.outcome != 'success' || steps.delete-artifact-registry.outcome != 'success' }}

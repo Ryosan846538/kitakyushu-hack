@@ -20,6 +20,7 @@
     "@fullcalendar/interaction": "^6.1.11",
     "@fullcalendar/react": "^6.1.11",
     "@fullcalendar/timegrid": "^6.1.11",
+    "@mui/material": "^5.15.14",
     "@yamada-ui/calendar": "^1.2.4",
     "@yamada-ui/react": "^1.2.11",
     "dayjs": "^1.11.10",

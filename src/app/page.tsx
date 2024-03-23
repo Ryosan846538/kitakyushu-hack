@@ -38,7 +38,7 @@ const facilities: Facility[] = [
 export default function Home() {
   return (
     <div className="mx-auto max-w-6xl pt-10">
-      <h1 className="mb-4 text-3xl font-bold">施設一覧</h1>
+      <h1 className="mb-4 text-3xl font-bold">プラン一覧</h1>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {facilities.map((facility) => (
           <FacilityCard

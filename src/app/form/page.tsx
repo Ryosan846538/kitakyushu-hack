@@ -24,27 +24,11 @@ function FormPage() {
             />
 
             <InputField
-              id="week"
-              name="week"
-              type="date"
+              id="name"
+              name="name"
+              type="name"
               required
-              placeholder="希望日程"
-            />
-
-            <TextareaField
-              id="activity"
-              name="activity"
-              required
-              placeholder="何をするか"
-              rows={6}
-            />
-
-            <TextareaField
-              id="request"
-              name="request"
-              required
-              placeholder="事前の要望"
-              rows={6}
+              placeholder="代表者名"
             />
 
             <InputField
@@ -53,6 +37,14 @@ function FormPage() {
               type="email"
               required
               placeholder="メールアドレス"
+            />
+
+            <TextareaField
+              id="business-details"
+              name="business-details"
+              required
+              placeholder="事業内容"
+              rows={6}
             />
           </div>
           <div>

@@ -76,4 +76,4 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v2
         with:
           region: "asia-northeast1"
-          metadata: "./cloudrun/service-frontend-main.yaml"
+          metadata: "./cloudrun/service.yaml"

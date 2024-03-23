@@ -26,7 +26,7 @@ function FormPage() {
             <InputField
               id="week"
               name="week"
-              type="text"
+              type="date"
               required
               placeholder="希望日程"
             />

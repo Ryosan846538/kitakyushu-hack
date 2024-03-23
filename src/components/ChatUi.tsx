@@ -1,5 +1,7 @@
 "use client";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import ChatBot from "react-simple-chatbot";
 
 function ChatUi() {

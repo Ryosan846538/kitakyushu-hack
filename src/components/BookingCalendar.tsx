@@ -50,15 +50,18 @@ function CalendarComponent() {
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
         locales={[jaLocale]}
-        locale="ja"
+        selectable
+        selectConstraint={{
+          daysOfWeek: [0, 1, 2, 3, 4, 5, 6], // 週のすべての日
+          duration: { days: 7 }, // 最大選択期間は7日間
+        }}
+        events={events}
+        select={handleEventAdd}
         headerToolbar={{
           left: "prev,next today",
           center: "title",
           right: "dayGridMonth,timeGridWeek",
         }}
-        events={events}
-        selectable
-        select={handleEventAdd}
       />
     </div>
   );

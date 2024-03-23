@@ -8,6 +8,7 @@ import {
   Heading,
   Button,
 } from "@yamada-ui/react";
+import Link from "next/link";
 import React from "react";
 
 interface FacilityCardProps {
@@ -31,7 +32,9 @@ export function FacilityCard({
         <Text>{description}</Text>
       </CardBody>
       <CardFooter justifyContent="flex-end">
-        <Button colorScheme="primary">予約</Button>
+        <Link href="/calendar">
+          <Button colorScheme="primary">予約</Button>
+        </Link>
       </CardFooter>
     </Card>
   );

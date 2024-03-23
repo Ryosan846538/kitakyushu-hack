@@ -14,15 +14,28 @@ function FormPage() {
         <form className="mt-8 space-y-6" action="#" method="POST">
           <input type="hidden" name="remember" value="true" />
           <div className="-space-y-px rounded-md shadow-sm">
-            <InputField id="company" name="company" placeholder="会社名" />
+            <InputField
+              id="company"
+              name="company"
+              placeholder="会社名"
+              type="text"
+              required
+            />
 
-            <InputField id="week" name="week" placeholder="希望日程" />
+            <InputField
+              id="week"
+              name="week"
+              placeholder="希望日程"
+              required
+              type="date"
+            />
 
             <TextareaField
               id="activity"
               name="activity"
               placeholder="何をするか"
               rows={6}
+              required
             />
 
             <TextareaField
@@ -30,6 +43,7 @@ function FormPage() {
               name="request"
               placeholder="事前の要望"
               rows={6}
+              required
             />
 
             <InputField
@@ -37,6 +51,7 @@ function FormPage() {
               name="email"
               type="email"
               placeholder="メールアドレス"
+              required
             />
           </div>
           <div>

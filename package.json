@@ -21,6 +21,7 @@
     "@fullcalendar/react": "^6.1.11",
     "@fullcalendar/timegrid": "^6.1.11",
     "@mui/material": "^5.15.14",
+    "@protobuf-ts/plugin": "^2.9.4",
     "@yamada-ui/calendar": "^1.2.4",
     "@yamada-ui/react": "^1.2.11",
     "dayjs": "^1.11.10",
@@ -31,6 +32,7 @@
     "react-dom": "^18",
     "react-simple-chatbot": "^0.6.1",
     "styled-components": "^6.1.8",
+    "ts-proto": "^1.169.1",
     "typescript": "^5.4.3"
   },
   "devDependencies": {

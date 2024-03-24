@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package chat;
+
+option go_package = "github.com/Ryosan846538/kitakyushu-hackathon-frontend/proto/pb_go";
+
+message ChatRequest {
+  repeated string messages = 1;
+}
+
+message ChatResponse {
+  string text = 1;
+}
+
+service OpenAIService {
+  rpc StreamChat(ChatRequest) returns (stream ChatResponse);
+}

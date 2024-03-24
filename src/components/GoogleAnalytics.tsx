@@ -10,9 +10,9 @@ function GoogleAnalytics() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (!IS_GATAG) {
-      return;
-    }
+    if (!IS_GATAG) return;
+    if (!searchParams) return;
+
     const url = pathname + searchParams.toString();
     pageview(url);
   }, [pathname, searchParams]);

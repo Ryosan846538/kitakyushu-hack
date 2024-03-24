@@ -35,9 +35,6 @@ export function FacilityCard({
         <Link href="/calendar">
           <Button colorScheme="primary">予約状況</Button>
         </Link>
-        <Link href="/form">
-          <Button colorScheme="primary">問い合わせ</Button>
-        </Link>
       </CardFooter>
     </Card>
   );

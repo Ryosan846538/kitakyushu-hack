@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 import ChatUi from "@/components/ChatUi";
 import FacilityCard from "@/components/FacilityCard";
@@ -14,31 +15,32 @@ interface Facility {
 const facilities: Facility[] = [
   {
     id: 1,
-    imageUrl: "/hotel1.jpg",
-    title: "リッチモンドホテル北九州駅前",
+    imageUrl: "/package2.jpg",
+    title: "製造業向けのIT企業パッケージ",
     description:
-      "北九州市小倉北区に位置するビジネスホテル。JR北九州駅から徒歩約2分とアクセスが良く、ビジネスや観光の拠点に最適です。",
+      "製造業向けのIT企業にとって理想的なリフレッシュとインスピレーションを提供するための、特別なワーケーションパッケージです。製造業のイノベーションとビジネスの発展を支援するために、レンタルオフィス、ホテル、特産品、製造工場の観光などを含んでいます。",
   },
   {
     id: 2,
-    imageUrl: "/hotel2.jpg",
-    title: "ホテルリブマックス北九州",
+    imageUrl: "/package2.jpg",
+    title: "採用目的のIT企業パッケージ",
     description:
-      "北九州市門司区にある快適なホテル。門司港レトロエリアや海峡ゆめタワーへのアクセスが便利です。",
+      "採用目的のIT企業にとって理想的なリフレッシュとインスピレーションを提供するための、特別なワーケーションパッケージです。製造業のイノベーションとビジネスの発展を支援するために、レンタルオフィス、ホテル、特産品、大学の来校などを含んでいます。",
   },
   {
     id: 3,
-    imageUrl: "/hotel3.jpg",
-    title: "ステーションホテル小倉",
+    imageUrl: "/package2.jpg",
+    title: "それ以外の目的の方向けのパッケージ",
     description:
-      "北九州市小倉北区にあるホテル。JR小倉駅から徒歩約1分と交通の便が良く、小倉城や西日本総合展示場へのアクセスも良好です。",
+      "それ以外の目的の方にとって理想的なリフレッシュとインスピレーションを提供するための、特別なワーケーションパッケージです。製造業のイノベーションとビジネスの発展を支援するために、レンタルオフィス、ホテル、特産品、観光などを含んでいます。",
   },
 ];
 
 export default function Home() {
   return (
     <div className="mx-auto max-w-6xl pt-10">
-      <h1 className="mb-4 text-3xl font-bold">プラン一覧</h1>
+      <Image src="/home.jpg" alt="北九州市" width={1200} height={800} />
+      <h1 className="mb-4 pt-10 text-3xl font-bold">パッケージ一覧</h1>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {facilities.map((facility) => (
           <FacilityCard

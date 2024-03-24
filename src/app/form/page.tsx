@@ -1,16 +1,17 @@
 "use client";
 
-import { Text, Button, Select, Option } from "@yamada-ui/react";
+import { Text, Button, Checkbox } from "@yamada-ui/react";
 import React, { useState } from "react";
 import { InputField } from "@/components/InputField";
 import { TextareaField } from "@/components/TextareaField";
+// import { useRouter } from "next/router";
 
 interface FormData {
   lastName: string;
   firstName: string;
   company: string;
   email: string;
-  business: string;
+  purpose: string;
   use_slack: boolean;
   inquiry: string;
   slack_other?: OtherStaffForm[];
@@ -23,13 +24,12 @@ interface OtherStaffForm {
 }
 
 function FormPage() {
-  const [useSlack, setUseSlack] = useState<boolean>(false);
   const [formData, setFormData] = useState<FormData>({
     lastName: "",
     firstName: "",
     company: "",
     email: "",
-    business: "",
+    purpose: "",
     use_slack: false,
     inquiry: "",
   });
@@ -42,8 +42,8 @@ function FormPage() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSelectChange = (value: string) => {
-    setUseSlack(value === "slack");
+  const handleSelectChange = (checked: boolean) => {
+    setFormData({ ...formData, use_slack: checked });
   };
 
   const handleOtherStaffFormChange = (
@@ -80,7 +80,6 @@ function FormPage() {
     e.preventDefault();
     const data: FormData = {
       ...formData,
-      use_slack: useSlack,
       slack_other: otherStaffForms,
     };
     fetch("https://jch.a.shion.pro/api/v1/inquiry", {
@@ -163,12 +162,12 @@ function FormPage() {
               />
 
               <TextareaField
-                id="business"
-                name="business"
+                id="purpose"
+                name="purpose"
                 required
-                placeholder="事業内容"
-                rows={4}
-                value={formData.business}
+                placeholder="来る理由"
+                rows={6}
+                value={formData.purpose}
                 onChange={handleChange}
               />
 
@@ -177,18 +176,17 @@ function FormPage() {
                 name="inquiry"
                 required={false}
                 placeholder="気になること"
-                rows={4}
+                rows={6}
                 value={formData.inquiry}
                 onChange={handleChange}
               />
 
-              <Select
-                placeholder="返信オプションを選択"
-                onChange={handleSelectChange}
+              <Checkbox
+                value="slack"
+                onChange={(e) => handleSelectChange(e.target.checked)}
               >
-                <Option value="slack">Slack</Option>
-                <Option value="email">Email</Option>
-              </Select>
+                Slackでのご連絡を希望する
+              </Checkbox>
 
               <div>
                 <Button

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -25,6 +26,7 @@ function Header() {
         isSticky ? "fixed inset-x-0 top-0 z-10 bg-white shadow-md" : ""
       }`}
     >
+      <GoogleAnalytics />
       <div className="px-4 py-3 md:py-6 lg:px-6">
         <div className="flex items-center space-y-2 md:space-x-6 md:space-y-0">
           <Link href="/" className="mr-4 text-2xl font-bold tracking-tighter">

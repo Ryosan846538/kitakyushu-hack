@@ -5,6 +5,7 @@ WORKDIR /app
 COPY ./.next ./.next
 COPY ./package.json ./package.json
 COPY ./yarn.lock ./yarn.lock
+COPY ./public ./public
 COPY node_modules node_modules
 
 CMD ["yarn", "start"]

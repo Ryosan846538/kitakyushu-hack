@@ -15,16 +15,21 @@ function CalendarComponent() {
     allDay?: boolean;
   }
 
-  const [events, setEvents] = useState<EventType[]>([
-    { title: "eventを", start: "2024-03-14" },
+  const [events] = useState<EventType[]>([
+    { title: "株式会社●●", start: "2024-03-04", end: "2024-03-09" },
     {
-      title: "こんな感じで追加できます",
-      start: "2024-03-15",
-      end: "2024-03-17",
+      title: "株式会社△△",
+      start: "2024-03-11",
+      end: "2024-03-16",
+    },
+    {
+      title: "株式会社××",
+      start: "2024-03-25",
+      end: "2024-03-30",
     },
   ]);
 
-  const handleEventAdd = (info: { start?: Date; end?: Date }) => {
+  /* const handleEventAdd = (info: { start?: Date; end?: Date }) => {
     // 入力ダイアログ
     const eventName = prompt("イベントを入力してください");
 
@@ -42,7 +47,7 @@ function CalendarComponent() {
         return updatedEvents; // 新しい配列を返す
       });
     }
-  };
+  }; */
 
   return (
     <div>
@@ -56,7 +61,7 @@ function CalendarComponent() {
           duration: { days: 7 }, // 最大選択期間は7日間
         }}
         events={events}
-        select={handleEventAdd}
+        // select={handleEventAdd}
         headerToolbar={{
           left: "prev,next today",
           center: "title",
